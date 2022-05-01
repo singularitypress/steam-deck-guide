@@ -5,5 +5,5 @@ interface IProps {
 }
 
 export const Container = ({ children }: IProps) => {
-  return <div className="container">{children}</div>;
+  return <div className="container mx-auto my-0">{children}</div>;
 };
