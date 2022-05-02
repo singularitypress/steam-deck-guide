@@ -1,0 +1,32 @@
+.markdown {
+  @apply text-lg leading-relaxed;
+
+  p,
+  ul,
+  ol,
+  blockquote {
+    @apply my-6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply mb-4 leading-snug;
+  }
+
+  h2 {
+    @apply mt-12;
+  }
+  h3 {
+    @apply mt-8;
+  }
+
+  a {
+    @apply border-b-2 border-dotted border-black font-bold transition-all duration-300;
+
+    &:hover {
+      @apply border-transparent;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.article {
+  &__banner {
+    @apply grid grid-cols-2 w-full h-screen;
+
+    > *:first-child {
+      @apply flex flex-col justify-center px-12 bg-black text-white;
+    }
+    > img {
+      @apply h-full object-cover;
+    }
+  }
+
+  &__tags {
+    @apply flex text-black;
+  }
+
+  &__tag {
+    @apply mr-4 mb-4 rounded-md bg-fuchsia-600 px-3 py-1;
+  }
+}
