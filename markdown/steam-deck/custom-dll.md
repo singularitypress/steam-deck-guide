@@ -8,8 +8,10 @@ og:
 ---
 
 ## Summary
+If you want to use things like ReShade, Special K, Durante's DSFix, Great Ace Attorney fps unlocker, Trails in the Sky voice patches, et al. you'll need to add a custom `dll` to the game folder. On Steam OS, that alone isn't sufficient though.
 
-If you want to use things like ReShade, Special K, Durante's DSFix, Great Ace Attorney fps unlocker, Trails in the Sky voice patches, et al. you'll need to add a custom `dll` to the game folder. On Steam OS, that alone isn't sufficient though; add the following to the launch parameters of the game in question:
+## Instructions
+Add the following to the launch parameters of the game you're dropping a custom `dll` into:
 
 ```bash
 WINEDLLOVERRIDES="YOUR_DLL_NAME=n,b" %command%

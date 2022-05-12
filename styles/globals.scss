@@ -10,6 +10,8 @@
 @import "./article";
 @import "./markdown";
 @import "./container";
+@import "./nav";
+@import "./footer";
 
 * {
   font-family: "Inter", ui-sans-serif, system-ui, -apple-system,
@@ -23,6 +25,10 @@ html {
 
   @media (prefers-color-scheme: dark) {
     @apply bg-eerie-black text-isabelline;
+  }
+
+  main {
+    @apply min-h-screen md:pt-16;
   }
 }
 

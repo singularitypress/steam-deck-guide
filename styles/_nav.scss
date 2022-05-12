@@ -1,0 +1,49 @@
+.nav {
+  @apply fixed w-full h-screen transition-all duration-500 translate-y-full md:translate-y-0 md:h-16 bg-isabelline dark:bg-eerie-black;
+
+  &-open {
+    @apply transition-all duration-500 translate-y-0;
+  }
+
+  &__button {
+    @apply fixed z-50 bottom-4 right-4 transition-all duration-500 bg-eerie-black text-isabelline dark:bg-isabelline dark:text-eerie-black w-16 h-16 rounded-full md:hidden;
+
+    &-open {
+      @apply transition-all duration-500 rotate-90;
+    }
+  }
+
+  &__container {
+    @apply flex flex-col h-full justify-end md:justify-start md:flex-row md:items-center;
+  }
+
+  &__title {
+    @apply font-bold pb-4 border-b border-b-eerie-black/50 dark:border-b-isabelline/50 md:border-none md:pb-0 md:mr-4 w-fit;
+
+    + .fa-circle {
+      @apply hidden md:block mr-4;
+      font-size: 0.25rem;
+    }
+  }
+
+  &__list {
+    @apply md:flex;
+
+    li {
+      @apply md:mr-4;
+
+      a {
+        @apply transition-all block md:py-4 hover:-translate-y-1;
+      }
+    }
+  }
+
+  a,
+  li {
+    @apply mb-4 md:mb-0;
+  }
+
+  &__contact {
+    @apply md:ml-auto;
+  }
+}

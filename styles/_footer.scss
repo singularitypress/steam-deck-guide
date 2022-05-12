@@ -1,0 +1,7 @@
+.footer {
+  @apply py-20 mt-20 w-full border-t border-t-eerie-black/25 dark:border-t-isabelline/50;
+
+  &__content {
+    @apply w-full flex flex-col justify-center items-center;
+  }
+}
