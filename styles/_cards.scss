@@ -1,0 +1,51 @@
+.cards {
+  @apply grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4;
+
+  .card {
+    @apply transition-all duration-300 border border-eerie-black/25 dark:border-isabelline/25 rounded-lg;
+
+    &:hover {
+      @apply transition-all duration-300 -translate-y-2;
+    }
+
+    &__container {
+      @apply h-full flex flex-col relative;
+    }
+
+    &__image {
+      @apply rounded-t-lg h-32 w-full object-cover;
+    }
+
+    &__header {
+      h2 {
+        @apply text-xl;
+      }
+      h3 {
+        @apply text-base font-normal;
+      }
+    }
+
+    &__footer {
+      @apply mt-auto;
+
+      a {
+        @apply font-bold transition-all duration-300 pb-1 border-b-2 border-dotted border-b-transparent;
+        &:hover {
+          @apply transition-all duration-300 border-b-eerie-black dark:border-b-isabelline;
+        }
+        &::after {
+          content: "";
+          @apply absolute top-0 right-0 bottom-0 left-0;
+        }
+        i {
+          @apply ml-2;
+        }
+      }
+    }
+
+    &__header,
+    &__footer {
+      @apply p-8;
+    }
+  }
+}

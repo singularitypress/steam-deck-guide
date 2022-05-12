@@ -3,17 +3,7 @@ import ErrorPage from "next/error";
 import Head from "next/head";
 import { markdownToHtml, MarkdownApi } from "@lib";
 import { Container, Markdown } from "@components/atomic";
-
-interface IPost {
-  title: string;
-  slug: string;
-  content: string;
-  section: string;
-  og: {
-    image: string;
-    description: string;
-  };
-}
+import { IPost } from "@types";
 
 interface IProps {
   post: IPost;
