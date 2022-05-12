@@ -1,13 +1,6 @@
 .markdown {
   @apply text-lg leading-relaxed;
 
-  p,
-  ul,
-  ol,
-  blockquote {
-    @apply my-6;
-  }
-
   h1,
   h2,
   h3,
@@ -23,10 +16,15 @@
   }
 
   a {
-    @apply border-b-2 border-dotted border-black font-bold transition-all duration-300;
+    @apply border-b-2 border-dotted border-eerie-black dark:border-isabelline font-bold transition-all duration-300;
 
     &:hover {
       @apply border-transparent;
     }
+  }
+
+  p,
+  pre {
+    @apply mb-4;
   }
 }

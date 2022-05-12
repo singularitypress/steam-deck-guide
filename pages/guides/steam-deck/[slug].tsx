@@ -32,22 +32,25 @@ export default ({ post: { title, og, slug, content, section } }: IProps) => {
         <title>{title} | Steam Deck Guides</title>
         <meta property="og:image" content={og.image} />
       </Head>
-      <div className="article">
-        <div className="article__banner">
-          <div>
-            <h1>{title}</h1>
+      <Container>
+        <div className="article">
+          <div className="article__head">
             <ul className="article__tags">
               {section.split(",").map((item) => (
-                <li className="article__tag">{item}</li>
+                <li className="article__tag">
+                  <small>{item}</small>
+                </li>
               ))}
             </ul>
+            <div className="article__header">
+              <h1>{title}</h1>
+              <p>{og.description}</p>
+            </div>
+            {og.image && <img src={og.image} alt={og.description} />}
           </div>
-          <img src={og.image} alt={og.description} />
-        </div>
-        <Container>
           <Markdown content={content} />
-        </Container>
-      </div>
+        </div>
+      </Container>
     </>
   );
 };
