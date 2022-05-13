@@ -22,9 +22,14 @@ export const Cards = ({ items, cta, theme = "" }: IProps) => {
   return (
     <ul className="cards">
       {items.map(({ title, url, tags, image, description }) => (
-        <li className="card">
+        <li key={title} className="card load">
           <article className="card__container">
-            <img className="card__image" src={image} alt={title} />
+            <img
+              loading="lazy"
+              className="card__image"
+              src={image}
+              alt={title}
+            />
             <div className="card__header">
               <h2 className="card__title">{title}</h2>
               <h3 className="card__subtitle">{description}</h3>

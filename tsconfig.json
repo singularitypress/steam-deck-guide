@@ -28,6 +28,9 @@
       ],
       "@types": [
         "@types"
+      ],
+      "@client": [
+        "client"
       ]
     }
   },

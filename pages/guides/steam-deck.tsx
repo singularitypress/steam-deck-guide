@@ -1,18 +1,22 @@
+import { sequentialFadeIn } from "@client";
 import { Container } from "@components/atomic";
 import { Cards } from "@components/organisms";
-import { MarkdownApi, markdownToHtml } from "@lib";
+import { MarkdownApi } from "@lib";
 import { IPost } from "@types";
-import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
 interface IProps {
   posts: IPost[];
 }
 
 export default ({ posts }: IProps) => {
+  useEffect(() => {
+    sequentialFadeIn("load");
+  }, []);
+
   return (
     <Container>
-      <h1>Steam Deck Guides</h1>
+      <h1 className="load load-animate">Steam Deck Guides</h1>
       <br />
       <br />
       <Cards
@@ -32,14 +36,7 @@ export default ({ posts }: IProps) => {
   );
 };
 
-type Params = {
-  params: {
-    title: string;
-    slug: string;
-  };
-};
-
-export const getStaticProps = async ({ params }: Params) => {
+export const getStaticProps = async () => {
   const { getAllPosts } = new MarkdownApi(["steam-deck"]);
 
   const posts = getAllPosts(["slug", "title", "og", "section"]);

@@ -4,6 +4,8 @@ import Head from "next/head";
 import { markdownToHtml, MarkdownApi } from "@lib";
 import { Container, Markdown } from "@components/atomic";
 import { IPost } from "@types";
+import { useEffect } from "react";
+import { sequentialFadeIn } from "@client";
 
 interface IProps {
   post: IPost;
@@ -16,6 +18,11 @@ export default ({ post: { title, og, slug, content, section } }: IProps) => {
   if (!router.isFallback && !slug) {
     return <ErrorPage statusCode={404} />;
   }
+
+  useEffect(() => {
+    sequentialFadeIn("load");
+  }, []);
+
   return (
     <>
       <Head>
@@ -24,7 +31,7 @@ export default ({ post: { title, og, slug, content, section } }: IProps) => {
       </Head>
       <Container>
         <div className="article">
-          <div className="article__head">
+          <div className="article__head load load-animate">
             <ul className="article__tags">
               {section.split(",").map((item) => (
                 <li className="article__tag">
@@ -38,7 +45,7 @@ export default ({ post: { title, og, slug, content, section } }: IProps) => {
             </div>
             {og.image && <img src={og.image} alt={og.description} />}
           </div>
-          <Markdown content={content} />
+          <Markdown className="load load-animate" content={content} />
         </div>
       </Container>
     </>
