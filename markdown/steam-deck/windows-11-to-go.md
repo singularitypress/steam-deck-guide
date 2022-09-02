@@ -12,16 +12,20 @@ Valve doesn't have an easy way to swap between Windows 11 and Linux easily. Unti
 
 ## Instructions
 ### 1. Install Windows 11 to an external SSD
+
+**Downloads:**
 1. Download Rufus (a tool to create bootable Windows 11) from [here](https://rufus.ie/en/)
 2. Download the Windows 11 ISO from [here](https://www.microsoft.com/en-ca/software-download/windows11)
-	1. Scroll down to "Download Windows 11 Disk Image (ISO)" and select "Windows 11 (multi-edition ISO)"
-	2. Click "Download"
-3. Start `Rufus`
-	1. choose your SSD drive in the `Device` section (if you don't see it, check the `List USB Hard Drives` in the `Advanced` drive properties)
-	2. Now click the `SELECT` button and find the Windows ISO you just downloaded.
-	3. Once the Windows ISO is detected, a new section should appear (`Image` option) - you need to select `Windows To Go` there.
-	4. You might see options like forcing Windows to allow you to use a Local account, privacy, etc. Select what you wanwt (you should select the Local account thing)
-	5. Click `Start`
+3. Scroll down to "Download Windows 11 Disk Image (ISO)" and select "Windows 11 (multi-edition ISO)"
+4. Click "Download"
+
+**Creating Windows 11 SSD:**
+1. Start `Rufus`
+2. choose your SSD drive in the `Device` section (if you don't see it, check the `List USB Hard Drives` in the `Advanced` drive properties)
+3. Now click the `SELECT` button and find the Windows ISO you just downloaded.
+4. Once the Windows ISO is detected, a new section should appear (`Image` option) - you need to select `Windows To Go` there.
+5. You might see options like forcing Windows to allow you to use a Local account, privacy, etc. Select what you wanwt (you should select the Local account thing)
+6. Click `Start`
 
 Congrats, after this our Windows SSD should be made! Don't have a key? Who cares!
 
